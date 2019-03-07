@@ -103,3 +103,55 @@ method name) and press Alt-Enter. Select the "Create method 'balance' in 'Accoun
 For the method body throw.
 
 Or check out Step 3.
+
+# Step 3
+
+Now we have more tests to cover the deposits and withdrawals.
+
+In addition we now have a transfer method for moving money between accounts
+(user requirement #3). As before there is no implementation.
+
+````java
+    public void transferTo(Account receivingAccount, Money amount) {
+        throw new RuntimeException("Not implemented");
+    }
+````
+
+A test for available funds could be...
+
+````java
+    @Test
+    public void transferAnAmountWithAvailableFunds() {
+        Account sendingAccount = Account.newAccount();
+        Account receivingAccount = Account.newAccount();
+        sendingAccount.deposit(Money.amountOf(10));
+        receivingAccount.deposit(Money.amountOf(5));
+        sendingAccount.transferTo(receivingAccount, Money.amountOf(6));
+        assertThat(sendingAccount.balance()).isEqualTo(Money.amountOf(4));
+        assertThat(receivingAccount.balance()).isEqualTo(Money.amountOf(16));
+    }
+````
+
+And the test for available funds could be...
+
+````java
+    @Test
+    public void transferAnAmountWithoutAvailableFunds() {
+        Account sendingAccount = Account.newAccount();
+        Account receivingAccount = Account.newAccount();
+        sendingAccount.deposit(Money.amountOf(3));
+        receivingAccount.deposit(Money.amountOf(5));
+        sendingAccount.transferTo(receivingAccount, Money.amountOf(6));
+        //TODO how do we know the funds didn't transfer?
+        assertThat(sendingAccount.balance()).isEqualTo(Money.amountOf(3));
+        assertThat(receivingAccount.balance()).isEqualTo(Money.amountOf(5));
+    }
+````
+
+We have a problem, how do we know the funds transfer, do we need to know the funds different
+transfer. Problem need to go back and clarify more on how to deal with a lack of funds.
+
+Running the tests now should give you RED against each test. In the next
+step we need to start turning some GREEN.
+
+Proceed to Step 4.
