@@ -32,7 +32,7 @@ So both *deposit* and *withdraw* are operations on an *account* involving *money
 There are also some extra considerations, how do we create accounts and how do we create money?
 (If you really know how to create lots of money please send me details!!!)
 
-This is how our account class could look like...
+This is how our account and money classes could look like...
 
 ````java
 class Account {
@@ -42,13 +42,11 @@ class Account {
 }
 
 class Money {
-    static Money amountOf(long amount);
+    static Money amountOf(long amount) { ... }
 }
 ````
 
-The 'factory methods' are instead of calling constructors directly to provide the extra considerations.
-
-Check the actual Java file for the real details.
+Check the actual Java file for the real details. The 'factory methods' are instead of calling constructors directly to provide the extra considerations.
 
 You will see that each method initially just throws an exception. This is so the class
 can be compiled without syntax errors but will still fail the tests.
