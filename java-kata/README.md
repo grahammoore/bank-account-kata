@@ -53,5 +53,5 @@ can be compiled without syntax errors but will still fail the tests.
 This allows us to craft the tests and have them compile and look sane
 in Intellij.
 
-
+Now checkout Step 2.
 
