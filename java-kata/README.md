@@ -55,3 +55,51 @@ in Intellij.
 
 Now checkout Step 2.
 
+# Step 2
+
+Now we are going to write some tests.
+
+#####*Money....*
+
+- Create some money.
+- Compare some money with the same amounts.
+- Compare some money with different amounts.
+
+#####*Account*
+
+- Create a new account with an opening balance.
+- Get an accounts current balance.
+- Deposit some money in an account.
+- Withdraw some money in an account.
+
+Some of the above tests can be tested on their own in isolation.
+However some operations can only be tested together, for instance 
+the 'newAccount()' method of on account with an opening balance is best tested with
+the get balance operation.
+
+The same is true for the money class, the 'amountOf()' money method on it's own
+cannot be tested but by comparing two money objects it is possible 
+to verify the 'amountOf()' method.
+
+Look at 'MoneyTest' to see some tests for 'amountOf()'.
+
+Now we know we can create Money objects and compare them let's look at
+a test for creating a new account and checking it's balance.
+
+````java
+public class AccountTest {
+    @Test
+    public void createANewAccount() {
+        Account account = Account.newAccount();
+        assertThat(account.balance()).isEqualTo(Money.amountOf(0));
+    }
+}
+````
+
+Ah but we don't have a 'balance()' method in our original account class so the class
+will not compile and Intellij complains. 
+To get Intellij to create one for us select the balance method (put the cursor in the
+method name) and press Alt-Enter. Select the "Create method 'balance' in 'Account'".
+For the method body throw.
+
+Or check out Step 3.

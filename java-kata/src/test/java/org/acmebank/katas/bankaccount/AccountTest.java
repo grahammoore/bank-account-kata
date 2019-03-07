@@ -5,9 +5,9 @@ import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class AccountTest {
-
     @Test
-    public void depositingAnAmountShouldIncreaseTheBalance() {
-
+    public void createANewAccount() {
+        Account account = Account.newAccount();
+        assertThat(account.balance()).isEqualTo(Money.amountOf(0));
     }
 }
