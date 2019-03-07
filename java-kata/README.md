@@ -132,7 +132,7 @@ A test for available funds could be...
     }
 ````
 
-And the test for available funds could be...
+And the test for no available funds could be...
 
 ````java
     @Test
@@ -155,3 +155,6 @@ Running the tests now should give you RED against each test. In the next
 step we need to start turning some GREEN.
 
 Proceed to Step 4.
+
+# Step 4
+
