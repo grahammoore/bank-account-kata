@@ -187,3 +187,5 @@ in an object and compares them for us.
 
 Proceed to Step 5 where the tests for Money should work.
 
+# Step 5
+
