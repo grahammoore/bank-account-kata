@@ -6,8 +6,14 @@ package org.acmebank.katas.bankaccount;
  */
 public class Money {
 
+    private long amount;
+
+    private Money(long amount) {
+        this.amount = amount;
+    }
+
     public static Money amountOf(long amount) {
-        throw new RuntimeException("Not implemented");
+        return new Money(amount);
     }
 
 }

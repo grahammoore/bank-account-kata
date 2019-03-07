@@ -158,3 +158,32 @@ Proceed to Step 4.
 
 # Step 4
 
+Let's tackle the Money tests first. The implementation of Money now encompasses an amount and
+a private constructor for the factory method use.
+
+Run the tests.
+
+Oh we have ORANGE, where does that fit into RED, GREEN, REFACTOR???
+
+You also probably have some output similar to below.
+
+````
+org.opentest4j.AssertionFailedError: 
+Expecting:
+ <org.acmebank.katas.bankaccount.Money@68ceda24>
+to be equal to:
+ <org.acmebank.katas.bankaccount.Money@281e3708>
+but was not.
+Expected :org.acmebank.katas.bankaccount.Money@281e3708
+Actual   :org.acmebank.katas.bankaccount.Money@68ceda24
+````
+
+What has happened is the test is comparing the reference to Money objects
+and not the amounts the objects represent. The Money class needs to know how
+to perform equality via the Java 'equals()' and 'hashCode()' methods but we
+don't want to get into the detail. This is why we are going to cheat and use
+Lombok to provide us with a both of these methods. Lombok looks at the fields
+in an object and compares them for us.
+
+Proceed to Step 5 where the tests for Money should work.
+
