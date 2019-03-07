@@ -5,4 +5,9 @@ package org.acmebank.katas.bankaccount;
  * This class should have no accessor methods.
  */
 public class Money {
+
+    public static void amountOf(long amount) {
+        throw new RuntimeException("Not implemented");
+    }
+
 }
