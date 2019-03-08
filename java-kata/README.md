@@ -189,3 +189,22 @@ Proceed to Step 5 where the tests for Money should work.
 
 # Step 5
 
+The money tests are now GREEN. Wrong, one is still ORANGE.
+
+This is because there is actually a typo in one of the tests.
+The typo was a genuine mistake but I have left it in to just
+show that there was a mismatch between expectation and reality.
+
+Find the issue and fix it to make the Money tests GREEN.
+
+Then work through the Account implementation and provide
+proper method bodies that don't throw exceptions. All the
+tests should eventually be GREEN. One hint though, to complete
+Account implementation you may need to provide more methods in
+Money. If you do write the methods and make them throw an exception;
+then write the test to see RED failing tests again. Finally
+implement the methods correctly to turn the tests GREEN.
+
+The last Step 6 has the complete implementations and tests for
+reference.
+
