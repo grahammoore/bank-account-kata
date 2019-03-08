@@ -2,26 +2,23 @@ package org.acmebank.katas.bankaccount;
 
 public class Account {
 
-    private Money balance = Money.amountOf(0);
-
     public static Account newAccount() {
-        return new Account();
+        throw new RuntimeException("Not implemented");
     }
 
     public Money balance() {
-        return balance;
+        throw new RuntimeException("Not implemented");
     }
 
     public void deposit(Money amount) {
-        balance = balance.plus(amount);
+        throw new RuntimeException("Not implemented");
     }
 
     public void withdraw(Money amount) {
-        balance = balance.minus(amount);
+        throw new RuntimeException("Not implemented");
     }
 
     public void transferTo(Account receivingAccount, Money amount) {
-        withdraw(amount);
-        receivingAccount.deposit(amount);
+        throw new RuntimeException("Not implemented");
     }
 }
