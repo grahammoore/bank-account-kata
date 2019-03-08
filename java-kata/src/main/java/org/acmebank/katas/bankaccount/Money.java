@@ -21,4 +21,11 @@ public class Money {
         return new Money(amount);
     }
 
+    public Money plus(Money value) {
+        return amountOf(amount + value.amount);
+    }
+
+    public Money minus(Money value) {
+        return amountOf(amount - value.amount);
+    }
 }

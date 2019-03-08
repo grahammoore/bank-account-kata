@@ -19,6 +19,6 @@ public class MoneyTest {
         Money amount1 = Money.amountOf(10);
         Money amount2 = Money.amountOf(20);
 
-        assertThat(amount1).isEqualTo(amount2);
+        assertThat(amount1).isNotEqualTo(amount2);
     }
 }

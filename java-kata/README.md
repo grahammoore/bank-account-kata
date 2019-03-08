@@ -209,3 +209,6 @@ The last Step 6 has the complete implementations and tests for
 reference. Note that there is still an ORANGE test. Can you 
 work out why and fix it to get all GREEN tests?
  
+Step 6
+
+All tests except one.
