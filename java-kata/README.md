@@ -189,7 +189,7 @@ Proceed to Step 5 where the tests for Money should work.
 
 # Step 5
 
-The money tests are now GREEN. Wrong, one is still ORANGE.
+The money tests are now GREEN. Wrong! One test is still ORANGE.
 
 This is because there is actually a typo in one of the tests.
 The typo was a genuine mistake but I have left it in to just
@@ -206,5 +206,6 @@ then write the test to see RED failing tests again. Finally
 implement the methods correctly to turn the tests GREEN.
 
 The last Step 6 has the complete implementations and tests for
-reference.
-
+reference. Note that there is still an ORANGE test. Can you 
+work out why and fix it to get all GREEN tests?
+ 

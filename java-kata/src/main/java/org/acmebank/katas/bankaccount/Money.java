@@ -1,12 +1,14 @@
 package org.acmebank.katas.bankaccount;
 
 import lombok.EqualsAndHashCode;
+import lombok.ToString;
 
 /**
  * Immutable class to represent Money as a concept.
  * This class should have no accessor methods.
  */
 @EqualsAndHashCode
+@ToString
 public class Money {
 
     private long amount;
@@ -19,4 +21,11 @@ public class Money {
         return new Money(amount);
     }
 
+    public Money plus(Money value) {
+        return amountOf(amount + value.amount);
+    }
+
+    public Money minus(Money value) {
+        return amountOf(amount - value.amount);
+    }
 }

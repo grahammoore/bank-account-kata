@@ -50,7 +50,7 @@ public class AccountTest {
         receivingAccount.deposit(Money.amountOf(5));
         sendingAccount.transferTo(receivingAccount, Money.amountOf(6));
         assertThat(sendingAccount.balance()).isEqualTo(Money.amountOf(4));
-        assertThat(receivingAccount.balance()).isEqualTo(Money.amountOf(16));
+        assertThat(receivingAccount.balance()).isEqualTo(Money.amountOf(11));
     }
 
     @Test
